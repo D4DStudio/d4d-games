@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact | D4D Games</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <meta name="description" content="Get in touch with D4D Games — we’d love to hear from you!" />
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body {
+      margin:0;
+      min-height:100vh;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(135deg,#162d50,#0b1a33);
+      background-attachment: fixed;
+      color:#d7f4d7;
+      padding:0;
+    }
+
+    .container{
+      width:100%;
+      max-width:1250px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(2,6,23,0.8);
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.05);
+      margin:0 auto;
+      border: 2px solid #ff6600;
+    }
+
+        .logo{
+      width:128px;
+      height:128px;
+      border-radius:64px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .logo img{width:100%;height:100%;object-fit:contain;}
+
+    header, footer{
+      padding:24px 36px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    nav a{
+      margin-left:16px;
+      text-decoration:none;
+      color:#bfe6c0;
+      font-weight:600;
+      transition:color .2s;
+    }
+    nav a:hover,
+    nav a.active{ color:#ff6600; }
+
+    main{
+      padding:60px 36px;
+      max-width:900px;
+      margin:0 auto;
+      line-height:1.7;
+      color:#e2f7e3;
+    }
+
+    main h2{
+      font-size:2rem;
+      color:#ff6600;
+      margin-bottom:20px;
+      /*font-family: 'Bradley Hand', cursive;*/
+      font-family: inherit;
+    }
+
+.contact-info {
+  margin-top: 20px;                  /* contact-list ile aynı */
+  padding: 0;                         /* contact-list’de padding yok, kutu içi boşluğu sıfır yapabiliriz */
+  border-radius: 12px;                /* orijinal korunuyor */
+  border: 1px solid rgba(255,255,255,0.05); 
+  background: rgba(255,255,255,0.03); /* renk korunuyor */
+}
+
+.contact-info ul {
+  list-style: none;                   /* list-style kaldırıldı */
+  padding: 0 0 0 5px;
+  margin: 0;
+}
+
+.contact-info li {
+  margin-bottom: 12px;                /* contact-list ile aynı */
+  font-size: 1.05rem;                 /* contact-list ile aynı */
+}
+
+.contact-info a {
+  color: #ff8533;                     /* orijinal renk korunuyor */
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+
+    footer{
+      background:rgba(255,255,255,0.03);
+      color:#bfe6c0;
+      font-size:0.9rem;
+      margin-bottom:10px;
+    }
+
+        .icon {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  margin: 0 4px;
+
+}
+
+    @media(max-width:740px){
+      header, footer, main{padding:18px;}
+      main h2{font-size:1.6rem;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="D4D_Logo_Games_2.png" alt="D4D Games logo">
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Contact D4D Games</h2>
+      <p>We’d love to hear from you! Whether it’s feedback, collaboration, or just a friendly hello — reach out anytime.</p>
+      <div class="contact-info">
+        <ul>
+        <li>Email: <a href="mailto:games@d4dstudio.net">games@d4dstudio.net</a></li>
+        <li>Instagram: <a href="https://instagram.com/d4d.games" target="_blank">@D4D.Games</a></li>
+        <li>X (Twitter): <a href="https://x.com/d4d_games" target="_blank">@D4D_Games</a></li>
+        </ul>
+      </div>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> D4D Games</div>
+      <div>Powered by D4D Studio <img src="game_pad.svg" alt="Gamepad icon" class="icon"></div>
+    </footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

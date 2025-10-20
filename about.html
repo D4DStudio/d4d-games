@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About | D4D Games</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <meta name="description" content="Learn more about D4D Games — playful worlds built with imagination and technology." />
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body {
+      margin:0;
+      min-height:100vh;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(135deg,#162d50,#0b1a33);
+      background-attachment: fixed;
+      color:#d7f4d7;
+      padding:0;
+    }
+
+    .container{
+      width:100%;
+      max-width:1250px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(2,6,23,0.8);
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.05);
+      margin:0 auto;
+      border: 2px solid #ff6600;
+    }
+
+    .logo{
+      width:128px;
+      height:128px;
+      border-radius:64px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .logo img{width:100%;height:100%;object-fit:contain;}
+
+    header, footer{
+      padding:24px 36px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    nav a{
+      margin-left:16px;
+      text-decoration:none;
+      color:#bfe6c0;
+      font-weight:600;
+      transition:color .2s;
+    }
+    nav a:hover,
+    nav a.active{ color:#ff6600; }
+
+    main{
+      padding:60px 36px;
+      max-width:900px;
+      margin:0 auto;
+      line-height:1.7;
+      color:#e2f7e3;
+    }
+
+    main h2{
+      font-size:2rem;
+      color:#ff6600;
+      margin-bottom:20px;
+      /*font-family: 'Bradley Hand', cursive;*/
+      font-family: inherit;
+    }
+
+    footer{
+      background:rgba(255,255,255,0.03);
+      color:#bfe6c0;
+      font-size:0.9rem;
+      margin-bottom:10px;
+    }
+
+        .icon {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  margin: 0 4px;
+
+}
+
+    @media(max-width:740px){
+      header, footer, main{padding:18px;}
+      main h2{font-size:1.6rem;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="D4D_Logo_Games_2.png" alt="D4D Games logo">
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>About D4D Games</h2>
+      <p>
+        D4D Games is a creative division of D4D Studio, focused on crafting immersive and meaningful interactive worlds.
+        Each of our games blends artistry and storytelling to offer players both fun and reflection.
+      </p>
+      <p>
+        We believe that games can inspire curiosity, imagination, and emotion.  
+        From small indie projects to expansive digital worlds, our mission is to create experiences that stay with you.
+      </p>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> D4D Games</div>
+      <div>Powered by D4D Studio <img src="game_pad.svg" alt="Gamepad icon" class="icon"></div>
+    </footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
