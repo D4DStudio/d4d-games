@@ -1,33 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>D4D Studio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>D4D Games</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <meta name="description" content="D4D Games — Playful Worlds by D4D Studio" />
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0d0d0d, #242424);
-      color: #f4f4f4;
-      height: 100vh;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    @import url('https://fonts.googleapis.com/css2?family=Bradley+Hand&display=swap');
+
+    :root{
+      --bg1: #0e1b30;
+      --bg2: #162d50; /* ana oyun rengi */
+      --accent: #ff6600; /* Games yazı rengi */
+      --muted: #d7f4d7; /* D4D rengi */
+      --radius: 14px;
+      --max-width: 1250px;
     }
-    h1 {
-      font-size: 2.5rem;
-      color: #00bcd4;
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(135deg,var(--bg1),var(--bg2));
+      background-attachment: fixed;
+      color: var(--muted);
+      padding:0;
     }
-    p {
-      color: #ccc;
-      font-size: 1.2rem;
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border-radius:20px;
+      padding:0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      overflow:hidden;
+      border: 2px solid var(--accent);
+      margin: 0 auto;
+    }
+
+    /* 🎮 Banner */
+    .banner{
+      width:100%;
+      aspect-ratio: 8 / 1;
+      background: url("./D4D_Banner_Games.png") center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+    }
+    .banner h1{
+      font-family: 'Bradley Hand', cursive;
+      font-size:3rem;
+      color: var(--accent);
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      padding:24px 36px;
+    }
+
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+    }
+
+    .brand h2{
+      font-family: 'Bradley Hand', cursive;
+      font-size:2rem;
+      color: var(--accent);
+      margin:0;
+    }
+
+    .brand p{
+      margin:0;
+      color:var(--muted);
+      font-weight:500;
+    }
+
+    nav.links{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:10px 14px;
+      border-radius:10px;
+      background:rgba(255,255,255,0.05);
+      color:var(--muted);
+      text-decoration:none;
+      font-weight:600;
+      border:1px solid rgba(255,255,255,0.1);
+      transition: all 0.15s ease;
+    }
+    .btn:hover{ transform: translateY(-3px); background: rgba(255,255,255,0.1); color:#fff; }
+
+    main{
+      display:flex;
+      gap:28px;
+      padding:0 36px 36px 36px;
+      align-items:stretch;
+      flex-wrap:wrap;
+    }
+
+    .hero{
+      flex:1 1 480px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:18px;
+    }
+
+    .hero h3{
+      margin:0;
+      font-size:1.8rem;
+      color:var(--accent);
+      /*font-family: 'Bradley Hand', cursive;*/
+      font-family: inherit;
+    }
+
+    .hero p{
+      color:var(--muted);
+      font-size:1.05rem;
+      line-height:1.6;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap:14px;
+      flex:1 1 360px;
+    }
+
+    .card{
+      background: rgba(255,255,255,0.05);
+      border-radius:var(--radius);
+      padding:18px;
+      min-height:120px;
+      border:1px solid rgba(255,255,255,0.1);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .card h4{margin:0;font-size:1.1rem;color:var(--accent);}
+    .card p{margin:6px 0 0;color:var(--muted);font-size:0.95rem;}
+    .card .link{margin-top:12px;text-decoration:none;font-weight:600;color:var(--accent)}
+
+    footer{
+      padding:18px 36px;
+      background:rgba(255,255,255,0.04);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:0.92rem;
+    }
+
+    .icon {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  margin: 0 4px;
+
+}
+
+    @media (max-width:740px){
+      header, main, footer{ padding:18px; }
+      .banner h1{ font-size:2rem; }
+      .hero h3{ font-size:1.4rem; }
     }
   </style>
 </head>
+
 <body>
-  <h1>🚧 D4D Games - Placeholder Page 🚧</h1>
-  <p>This page is currently under construction.</p>
+  <div class="container" role="main">
+
+    <!-- 🎮 Banner -->
+    <div class="banner">
+
+    </div>
+
+    <!-- 🧩 Header -->
+    <header>
+      <div class="brand">
+        <h2>D4D Games</h2>
+        <p>Playful Worlds • Made with ❤️ by D4D Studio</p>
+      </div>
+
+      <nav class="links">
+        <a class="btn" href="https://d4dstudio.net">Studio</a>
+        <a class="btn" href="about.html">About</a>
+        <a class="btn" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- 🪄 Main -->
+    <main>
+      <section class="hero">
+        <h3>Welcome to D4D Games!</h3>
+        <p>We create immersive, story-driven, and visually inspiring games that spark imagination. From puzzle adventures to experimental indie experiences — every game is crafted with passion and creativity.</p>
+      </section>
+
+      <aside class="cards">
+        <article class="card">
+          <h4>Project EvoMerge</h4>
+          <p>Our upcoming merge-adventure game where nature evolves through your choices.</p>
+          <a class="link" href="./Evomerge/evomerge.html">Learn more →</a>
+        </article>
+
+        <article class="card">
+          <h4>Arcane Drift</h4>
+          <p>A meditative flight through shifting realms of light and sound.</p>
+          <a class="link" href="arcanedrift.html">Learn more →</a>
+        </article>
+
+        <article class="card">
+          <h4>Mini Worlds</h4>
+          <p>Micro sandbox universes built to explore and create freely.</p>
+          <a class="link" href="miniworlds.html">Learn more →</a>
+        </article>
+      </aside>
+    </main>
+
+    <!-- ⚡ Footer -->
+    <footer>
+      <div>© <span id="year"></span> D4D Studio</div>
+      <div>Crafted with <img src="game_pad.svg" alt="Gamepad icon" class="icon"> energy</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
