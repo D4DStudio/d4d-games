@@ -350,3 +350,10 @@ ul.feature-list a:hover {
   margin-top: 20px;
 }
 
+.privacy-section a {
+  color: #DF9C0A; /* Fusion White tone for contrast */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
