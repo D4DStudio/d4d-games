@@ -182,6 +182,33 @@
       .banner h1{ font-size:2rem; }
       .hero h3{ font-size:1.4rem; }
     }
+
+        /* 🧩 Coming Soon card */
+    .coming-soon {
+      opacity: 0.6;
+      background: rgba(255, 255, 255, 0.03);
+      text-align: center;
+      cursor: default;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .coming-soon:hover {
+      opacity: 0.8;
+      transform: scale(1.02);
+    }
+
+    .coming-soon .soon {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: linear-gradient(145deg, #DF9C0A, #f0c14a);
+      color: #230948;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(223,156,10,0.5);
+    }
+
+    
   </style>
 </head>
 
@@ -216,23 +243,24 @@
 
       <aside class="cards">
         <article class="card">
-          <h4>Project EvoMerge</h4>
+          <h4>EvoMerge</h4>
           <p>Our upcoming merge-adventure game where nature evolves through your choices.</p>
           <a class="link" href="./Evomerge/evomerge.html">Learn more →</a>
         </article>
 
-<article class="card">
-  <h4>DualDice</h4>
-  <p>Balance Yin and Yang in every roll — a minimalist dice experience of luck and focus.</p>
-  <a class="link" href="./Dualdice/dualdice.html">Learn more →</a>
-</article>
-
-
         <article class="card">
-          <h4>Mini Worlds</h4>
-          <p>Micro sandbox universes built to explore and create freely.</p>
-          <a class="link" href="miniworlds.html">Learn more →</a>
+          <h4>DualDice</h4>
+          <p>Balance Yin and Yang in every roll — a minimalist dice experience of luck and focus.</p>
+          <a class="link" href="./Dualdice/dualdice.html">Learn more →</a>
         </article>
+
+
+        <article class="card coming-soon">
+          <h4>New Projects</h4>
+          <p>Fresh experiences from D4D Studio are on the way.</p>
+          <span class="soon">Coming Soon</span>
+        </article>
+        
       </aside>
     </main>
 
