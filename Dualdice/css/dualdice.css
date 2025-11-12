@@ -138,8 +138,43 @@ body {
 .about .subtitle {
   font-size: 20px;
   color: #E6E1F0;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* yazı ve ikonlar arasında boşluk */
+  flex-wrap: wrap;
+  margin-bottom: 15px;
 }
+
+.fusion-icon1 {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(255, 210, 100, 0.8));
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.fusion-icon2 {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(180, 120, 255, 0.9));
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.fusion-icon1:hover {
+  transform: rotate(-10deg) scale(1.05);
+  opacity: 1;
+}
+
+.fusion-icon2:hover {
+  transform: rotate(10deg) scale(1.05);
+  opacity: 1;
+}
+
 
 .about-text {
   max-width: 800px;
